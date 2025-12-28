@@ -1,0 +1,72 @@
+.poop-list-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.poop-list-container h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.poop-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.poop-item {
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.poop-item:last-child {
+  margin-bottom: 0;
+}
+
+.poop-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.poop-id {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.poop-age {
+  font-size: 12px;
+  color: #e74c3c;
+  font-weight: 600;
+  font-family: monospace;
+}
+
+.poop-location {
+  font-size: 12px;
+  color: #666;
+}
+
+.empty-state {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+  font-size: 14px;
+}

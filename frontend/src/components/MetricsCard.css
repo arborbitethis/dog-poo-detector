@@ -1,0 +1,56 @@
+.metrics-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.metrics-card h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.metrics-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.metric:last-child {
+  border-bottom: none;
+}
+
+.metric-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.metric-value {
+  font-size: 28px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.metric-value.active {
+  color: #e74c3c;
+}
+
+.metric-value.pending {
+  color: #f39c12;
+}
+
+.metric-value.cleaned {
+  color: #27ae60;
+}
+
+.metric-value.total {
+  color: #2c3e50;
+}

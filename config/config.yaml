@@ -1,0 +1,33 @@
+stream:
+  url: "rtsp://192.168.1.100:554/stream1"  # RTSP camera stream
+  # Common camera RTSP formats:
+  # Generic: rtsp://IP:554/stream1
+  # With auth: rtsp://username:password@IP:554/stream1
+  # Hikvision: rtsp://IP:554/Streaming/Channels/101
+  # Reolink: rtsp://IP:554/h264Preview_01_main
+  reconnect_delay: 5
+
+detection:
+  model: "yolov8x.pt"  # or custom trained model
+  confidence_threshold: 0.5
+  inference_interval: 5  # frames between inference
+
+tracking:
+  iou_threshold: 0.3  # for matching poop across frames
+  stale_threshold: 300  # frames before losing track
+  cleanup_confirm_frames: 15  # frames poop must be gone
+
+pooping_detection:
+  stationary_threshold: 3.0  # seconds dog must be still
+  aspect_ratio_threshold: 0.8  # height/width ratio for squat
+
+alerts:
+  new_poop: true
+  cleanup: true
+  aged_minutes: 30  # alert if poop uncleaned for this long
+
+web_server:
+  host: "0.0.0.0"
+  port: 8080
+  enable_video_stream: true
+  video_quality: 80  # JPEG quality for MJPEG stream

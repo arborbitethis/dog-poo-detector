@@ -1,0 +1,88 @@
+.alert-log-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.alert-log-container h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.alert-log {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.alert {
+  display: flex;
+  gap: 15px;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  border-left: 4px solid;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.alert:last-child {
+  margin-bottom: 0;
+}
+
+.alert-poop-detected {
+  background: #fff3cd;
+  border-color: #ffc107;
+}
+
+.alert-poop-confirmed {
+  background: #d1ecf1;
+  border-color: #17a2b8;
+}
+
+.alert-poop-cleaned {
+  background: #d4edda;
+  border-color: #28a745;
+}
+
+.alert-time {
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+  font-weight: 600;
+  font-family: monospace;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #2c3e50;
+}
+
+.alert-message {
+  font-size: 13px;
+  color: #666;
+}
+
+.empty-state {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+  font-size: 14px;
+}
